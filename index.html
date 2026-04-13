@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solana Skin Love — Natural Lip Balms</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --cream: #F5F0E8;
+    --dark: #1A1208;
+    --gold: #C9A96E;
+    --gold-light: #E8D5A3;
+    --brown: #3D2B1F;
+    --muted: #8B7355;
+    --white: #FDFAF4;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    background: var(--cream);
+    color: var(--dark);
+    overflow-x: hidden;
+  }
+
+  /* NOISE TEXTURE OVERLAY */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.4;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    mix-blend-mode: multiply;
+  }
+
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: var(--dark);
+    text-transform: uppercase;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--brown);
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-left {
+    background: var(--dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8rem 4rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-left::after {
+    content: '';
+    position: absolute;
+    bottom: -100px; right: -100px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(201,169,110,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.2s forwards;
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1.05;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.4s forwards;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  .hero-desc {
+    font-size: 0.85rem;
+    line-height: 1.8;
+    color: rgba(253,250,244,0.55);
+    max-width: 320px;
+    margin-bottom: 3rem;
+    font-weight: 300;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.6s forwards;
+  }
+
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--gold);
+    color: var(--dark);
+    padding: 1rem 2rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+    width: fit-content;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.8s forwards;
+  }
+
+  .hero-cta:hover {
+    background: var(--gold-light);
+    transform: translateX(4px);
+  }
+
+  .hero-cta-arrow { font-size: 1rem; transition: transform 0.3s; }
+  .hero-cta:hover .hero-cta-arrow { transform: translateX(4px); }
+
+  .hero-right {
+    background: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 4rem 4rem;
+    position: relative;
+  }
+
+  .hero-product-display {
+    position: relative;
+    width: 280px;
+    height: 480px;
+  }
+
+  .balm-card {
+    position: absolute;
+    background: var(--dark);
+    border-radius: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    box-shadow: 0 30px 80px rgba(26,18,8,0.25);
+  }
+
+  .balm-card-1 {
+    width: 80px; height: 260px;
+    left: 30px; top: 80px;
+    animation: floatA 4s ease-in-out infinite;
+  }
+
+  .balm-card-2 {
+    width: 80px; height: 260px;
+    right: 30px; top: 140px;
+    animation: floatB 4s ease-in-out infinite;
+    background: #2A1F15;
+  }
+
+  .balm-label {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--gold);
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+  }
+
+  .balm-name {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--white);
+    font-size: 1rem;
+    font-style: italic;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    letter-spacing: 0.05em;
+  }
+
+  .balm-dot {
+    width: 6px; height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+  }
+
+  .hero-badge {
+    position: absolute;
+    top: 40px; right: 20px;
+    width: 90px; height: 90px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    animation: spin 20s linear infinite;
+  }
+
+  .hero-badge span {
+    font-size: 0.55rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--brown);
+    font-weight: 500;
+  }
+
+  .hero-badge strong {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    color: var(--gold);
+  }
+
+  /* MARQUEE */
+  .marquee-wrap {
+    background: var(--dark);
+    padding: 1rem 0;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .marquee-track {
+    display: flex;
+    gap: 3rem;
+    animation: marquee 18s linear infinite;
+    white-space: nowrap;
+  }
+
+  .marquee-item {
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  .marquee-item::after {
+    content: '✦';
+    color: var(--muted);
+    font-size: 0.5rem;
+  }
+
+  /* PRODUCTS SECTION */
+  .products {
+    padding: 8rem 4rem;
+    position: relative;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+  }
+
+  .section-eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--dark);
+  }
+
+  .section-title em { font-style: italic; color: var(--brown); }
+
+  .section-line {
+    width: 60px;
+    height: 1px;
+    background: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .product-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    group: true;
+  }
+
+  .product-card-inner {
+    padding: 3.5rem;
+    position: relative;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .product-card:hover .product-card-inner { transform: translateY(-4px); }
+
+  .product-card-vanilla .product-card-inner {
+    background: var(--dark);
+  }
+
+  .product-card-peppermint .product-card-inner {
+    background: var(--brown);
+  }
+
+  .product-bg-text {
+    position: absolute;
+    bottom: -20px; right: -10px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 8rem;
+    font-weight: 600;
+    opacity: 0.04;
+    color: var(--white);
+    pointer-events: none;
+    line-height: 1;
+    user-select: none;
+  }
+
+  .product-tag {
+    display: inline-block;
+    border: 1px solid rgba(201,169,110,0.4);
+    padding: 0.3rem 0.8rem;
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 2rem;
+  }
+
+  .product-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .product-name em { font-style: italic; color: var(--gold-light); }
+
+  .product-sub {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(253,250,244,0.4);
+    margin-bottom: 2rem;
+  }
+
+  .product-notes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .note-pill {
+    background: rgba(201,169,110,0.12);
+    border: 1px solid rgba(201,169,110,0.25);
+    padding: 0.35rem 0.9rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    color: var(--gold-light);
+    border-radius: 20px;
+  }
+
+  .product-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .product-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    color: var(--white);
+    font-weight: 300;
+  }
+
+  .product-price span {
+    font-size: 0.8rem;
+    color: var(--muted);
+    font-family: 'Jost', sans-serif;
+    letter-spacing: 0.1em;
+    margin-left: 0.25rem;
+  }
+
+  .product-btn {
+    background: var(--gold);
+    color: var(--dark);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .product-btn:hover { background: var(--gold-light); }
+
+  /* INGREDIENTS STRIP */
+  .ingredients {
+    padding: 7rem 4rem;
+    background: var(--white);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ingredients::before {
+    content: '';
+    position: absolute;
+    top: -200px; left: -200px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(201,169,110,0.06) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .ingredients-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+  }
+
+  .ingredient-item {
+    text-align: center;
+    padding: 2rem 1rem;
+    border-top: 1px solid rgba(201,169,110,0.3);
+    transition: border-color 0.3s;
+  }
+
+  .ingredient-item:hover { border-color: var(--gold); }
+
+  .ingredient-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .ingredient-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+  }
+
+  .ingredient-desc {
+    font-size: 0.72rem;
+    color: var(--muted);
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  /* STORY SECTION */
+  .story {
+    padding: 8rem 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+  }
+
+  .story-visual {
+    position: relative;
+    height: 500px;
+  }
+
+  .story-block-1 {
+    position: absolute;
+    top: 0; left: 0;
+    width: 65%; height: 75%;
+    background: var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .story-block-2 {
+    position: absolute;
+    bottom: 0; right: 0;
+    width: 55%; height: 55%;
+    background: var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .story-block-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    text-align: center;
+    padding: 2rem;
+    line-height: 1.5;
+  }
+
+  .story-block-1 .story-block-text { color: var(--gold-light); }
+  .story-block-2 .story-block-text { color: var(--dark); font-size: 1rem; }
+
+  .story-content {}
+
+  .story-body {
+    font-size: 0.9rem;
+    line-height: 2;
+    color: var(--brown);
+    font-weight: 300;
+    margin-bottom: 2rem;
+  }
+
+  .story-stat-row {
+    display: flex;
+    gap: 3rem;
+    margin-top: 3rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(201,169,110,0.3);
+  }
+
+  .story-stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+  }
+
+  .story-stat-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* ORDER SECTION */
+  .order {
+    background: var(--dark);
+    padding: 8rem 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .order::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px; height: 800px;
+    background: radial-gradient(circle, rgba(201,169,110,0.06) 0%, transparent 60%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .order-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 300;
+    color: var(--white);
+    margin-bottom: 1rem;
+    position: relative;
+  }
+
+  .order-title em { color: var(--gold-light); font-style: italic; }
+
+  .order-sub {
+    font-size: 0.8rem;
+    color: rgba(253,250,244,0.45);
+    letter-spacing: 0.15em;
+    margin-bottom: 3.5rem;
+    font-weight: 300;
+  }
+
+  .order-options {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+
+  .order-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.1rem 2.5rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s;
+    cursor: pointer;
+    border: none;
+  }
+
+  .order-btn-primary {
+    background: var(--gold);
+    color: var(--dark);
+  }
+
+  .order-btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+  .order-btn-secondary {
+    background: transparent;
+    color: var(--white);
+    border: 1px solid rgba(201,169,110,0.4);
+  }
+
+  .order-btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+
+  .order-note {
+    font-size: 0.7rem;
+    color: rgba(253,250,244,0.3);
+    letter-spacing: 0.1em;
+  }
+
+  /* FOOTER */
+  footer {
+    background: #0E0B05;
+    padding: 3rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    text-transform: uppercase;
+  }
+
+  .footer-tagline {
+    font-size: 0.65rem;
+    color: var(--muted);
+    letter-spacing: 0.15em;
+    margin-top: 0.25rem;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .footer-links a {
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .footer-links a:hover { color: var(--gold); }
+
+  .footer-copy {
+    font-size: 0.6rem;
+    color: rgba(139,115,85,0.5);
+    letter-spacing: 0.1em;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes floatA {
+    0%, 100% { transform: translateY(0px) rotate(-3deg); }
+    50% { transform: translateY(-18px) rotate(-3deg); }
+  }
+
+  @keyframes floatB {
+    0%, 100% { transform: translateY(0px) rotate(3deg); }
+    50% { transform: translateY(-12px) rotate(3deg); }
+  }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    nav { padding: 1.2rem 1.5rem; }
+    .nav-links { display: none; }
+
+    .hero {
+      grid-template-columns: 1fr;
+      min-height: auto;
+    }
+
+    .hero-left { padding: 7rem 2rem 4rem; }
+    .hero-right { padding: 3rem 2rem 4rem; min-height: 400px; }
+
+    .hero-product-display { width: 220px; height: 380px; }
+    .balm-card-1, .balm-card-2 { width: 65px; height: 200px; }
+
+    .products { padding: 5rem 1.5rem; }
+    .section-header { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+    .products-grid { grid-template-columns: 1fr; }
+
+    .ingredients { padding: 5rem 1.5rem; }
+    .ingredients-grid { grid-template-columns: 1fr 1fr; }
+
+    .story { grid-template-columns: 1fr; padding: 5rem 1.5rem; gap: 3rem; }
+    .story-visual { height: 300px; }
+
+    .order { padding: 5rem 1.5rem; }
+    .order-options { flex-direction: column; align-items: center; }
+
+    footer { flex-direction: column; gap: 1.5rem; text-align: center; padding: 2.5rem 1.5rem; }
+    .footer-links { flex-wrap: wrap; justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Solana</div>
+  <ul class="nav-links">
+    <li><a href="#products">Products</a></li>
+    <li><a href="#story">Our Story</a></li>
+    <li><a href="#order">Order</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Natural Lip Care · Nairobi</p>
+    <h1 class="hero-title">Lips that<br><em>glow,</em><br>healed.</h1>
+    <p class="hero-desc">Handcrafted lip balms with alpha arbutin, shea butter & natural botanicals. Formulated to brighten, heal and protect.</p>
+    <a href="#order" class="hero-cta">
+      Order Now
+      <span class="hero-cta-arrow">→</span>
+    </a>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-product-display">
+      <div class="balm-card balm-card-1">
+        <div class="balm-dot"></div>
+        <div class="balm-label">Solana</div>
+        <div class="balm-name">French Vanilla</div>
+        <div class="balm-dot"></div>
+      </div>
+      <div class="balm-card balm-card-2">
+        <div class="balm-dot"></div>
+        <div class="balm-label">Solana</div>
+        <div class="balm-name">Peppermint</div>
+        <div class="balm-dot"></div>
+      </div>
+      <div class="hero-badge">
+        <span>KES</span>
+        <strong>300</strong>
+        <span>each</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item">Natural Ingredients</span>
+    <span class="marquee-item">Brightening Formula</span>
+    <span class="marquee-item">Handcrafted in Nairobi</span>
+    <span class="marquee-item">Shea Butter & Beeswax</span>
+    <span class="marquee-item">Alpha Arbutin</span>
+    <span class="marquee-item">For All Genders</span>
+    <span class="marquee-item">Natural Ingredients</span>
+    <span class="marquee-item">Brightening Formula</span>
+    <span class="marquee-item">Handcrafted in Nairobi</span>
+    <span class="marquee-item">Shea Butter & Beeswax</span>
+    <span class="marquee-item">Alpha Arbutin</span>
+    <span class="marquee-item">For All Genders</span>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section class="products" id="products">
+  <div class="section-header">
+    <div>
+      <p class="section-eyebrow">The Collection</p>
+      <h2 class="section-title">Two <em>scents,</em><br>one obsession.</h2>
+    </div>
+    <div>
+      <div class="section-line"></div>
+      <p style="font-size:0.7rem;color:var(--muted);letter-spacing:0.1em;">Ksh 300 each</p>
+    </div>
+  </div>
+
+  <div class="products-grid">
+
+    <!-- Vanilla -->
+    <div class="product-card product-
