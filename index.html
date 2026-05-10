@@ -179,12 +179,17 @@
 
   .hero-product-display {
     position: relative;
-    width: 280px;
-    height: 480px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 20px;
+    height: 360px;
+    width: 100%;
   }
 
   .balm-card {
-    position: absolute;
+    position: relative;
     background: var(--dark);
     border-radius: 60px;
     display: flex;
@@ -193,20 +198,33 @@
     justify-content: center;
     gap: 0.5rem;
     box-shadow: 0 30px 80px rgba(26,18,8,0.25);
+    width: 76px;
+    flex-shrink: 0;
   }
 
   .balm-card-1 {
-    width: 80px; height: 260px;
-    left: 30px; top: 80px;
+    height: 230px;
+    margin-bottom: 50px;
     animation: floatA 4s ease-in-out infinite;
   }
 
   .balm-card-2 {
-    width: 80px; height: 260px;
-    right: 30px; top: 140px;
+    height: 270px;
+    margin-bottom: 0px;
     animation: floatB 4s ease-in-out infinite;
     background: #2A1F15;
   }
+
+  .balm-card-3 {
+    height: 210px;
+    margin-bottom: 70px;
+    animation: floatA 4s ease-in-out infinite;
+    animation-delay: 1.5s;
+    background: linear-gradient(180deg, #6B2040 0%, #3D0F25 100%);
+  }
+
+  .balm-card-3 .balm-label { color: #FFB6C1; }
+  .balm-card-3 .balm-dot { background: #E8638A; }
 
   .balm-label {
     font-family: 'Cormorant Garamond', serif;
@@ -238,8 +256,8 @@
 
   .hero-badge {
     position: absolute;
-    top: 40px; right: 20px;
-    width: 90px; height: 90px;
+    top: 0px; right: 0px;
+    width: 80px; height: 80px;
     border: 1px solid var(--gold);
     border-radius: 50%;
     display: flex;
@@ -248,6 +266,8 @@
     justify-content: center;
     gap: 2px;
     animation: spin 20s linear infinite;
+    background: var(--cream);
+    z-index: 10;
   }
 
   .hero-badge span {
@@ -298,7 +318,7 @@
 
   /* PRODUCTS SECTION */
   .products {
-    padding: 8rem 4rem;
+    padding: 6rem 2.5rem;
     position: relative;
   }
 
@@ -336,8 +356,8 @@
 
   .products-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.2rem;
   }
 
   .product-card {
@@ -348,7 +368,7 @@
   }
 
   .product-card-inner {
-    padding: 3.5rem;
+    padding: 2.2rem;
     position: relative;
     transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
@@ -361,6 +381,48 @@
 
   .product-card-peppermint .product-card-inner {
     background: var(--brown);
+  }
+
+  .product-card-bubbleberry .product-card-inner {
+    background: linear-gradient(145deg, #6B2040 0%, #3D0F25 100%);
+  }
+
+  .product-card-bubbleberry .product-tag {
+    border-color: rgba(255,182,193,0.45);
+    color: #FFB6C1;
+  }
+
+  .product-card-bubbleberry .product-sub { color: rgba(255,182,193,0.55); }
+
+  .product-card-bubbleberry .note-pill {
+    background: rgba(255,105,135,0.12);
+    border-color: rgba(255,105,135,0.3);
+    color: #FFB6C1;
+  }
+
+  .product-card-bubbleberry .product-name { color: #FDFAF4; }
+  .product-card-bubbleberry .product-name em { color: #FFB6C1; }
+  .product-card-bubbleberry .product-price { color: #FDFAF4; }
+  .product-card-bubbleberry .product-price span { color: rgba(255,182,193,0.6); }
+
+  .product-card-bubbleberry .product-btn {
+    background: #E8638A;
+    color: #fff;
+  }
+  .product-card-bubbleberry .product-btn:hover { background: #FFB6C1; color: var(--dark); }
+
+  .new-badge {
+    position: absolute;
+    top: 1.5rem; right: 1.5rem;
+    background: #E8638A;
+    color: #fff;
+    font-size: 0.55rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.7rem;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    z-index: 2;
   }
 
   .product-bg-text {
@@ -389,7 +451,7 @@
 
   .product-name {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 2.8rem;
+    font-size: 2.2rem;
     font-weight: 300;
     color: var(--white);
     line-height: 1;
@@ -482,7 +544,7 @@
 
   .ingredients-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-top: 4rem;
   }
@@ -775,8 +837,6 @@
     .products { padding: 5rem 1.5rem; }
     .section-header { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
     .products-grid { grid-template-columns: 1fr; }
-
-    .ingredients { padding: 5rem 1.5rem; }
     .ingredients-grid { grid-template-columns: 1fr 1fr; }
 
     .story { grid-template-columns: 1fr; padding: 5rem 1.5rem; gap: 3rem; }
@@ -807,8 +867,7 @@
   <div class="hero-left">
     <p class="hero-eyebrow">Natural Lip Care · Nairobi</p>
     <h1 class="hero-title">Lips that<br><em>glow,</em><br>healed.</h1>
-    <p class="hero-desc">Handcrafted lip balms with shea butter , almond oil & other natural botanicals. Formulated to heal
-     , protect & brighten.</p>
+    <p class="hero-desc">Handcrafted lip balms with alpha arbutin, shea butter & natural botanicals. Formulated to brighten, heal and protect.</p>
     <a href="#order" class="hero-cta">
       Order Now
       <span class="hero-cta-arrow">→</span>
@@ -827,6 +886,12 @@
         <div class="balm-dot"></div>
         <div class="balm-label">Solana</div>
         <div class="balm-name">Peppermint</div>
+        <div class="balm-dot"></div>
+      </div>
+      <div class="balm-card balm-card-3">
+        <div class="balm-dot"></div>
+        <div class="balm-label">Solana</div>
+        <div class="balm-name">Bubble Berry</div>
         <div class="balm-dot"></div>
       </div>
       <div class="hero-badge">
@@ -861,7 +926,7 @@
   <div class="section-header">
     <div>
       <p class="section-eyebrow">The Collection</p>
-      <h2 class="section-title">Two <em>scents,</em><br>one obsession.</h2>
+      <h2 class="section-title">Three <em>scents,</em><br>one obsession.</h2>
     </div>
     <div>
       <div class="section-line"></div>
@@ -883,6 +948,7 @@
           <span class="note-pill">🍦 Vanilla</span>
           <span class="note-pill">🍫 Cocoa Butter</span>
           <span class="note-pill">✨ Brightening</span>
+          <span class="note-pill">💧 Hydrating</span>
         </div>
         <div class="product-footer">
           <div class="product-price">300 <span>KES</span></div>
@@ -904,6 +970,7 @@
           <span class="note-pill">🍦 Vanilla</span>
           <span class="note-pill">💧 Hydrating</span>
           <span class="note-pill">✨ Brightening</span>
+          <span class="note-pill">✨ healing</span>
         </div>
         <div class="product-footer">
           <div class="product-price">300 <span>KES</span></div>
@@ -913,10 +980,31 @@
       </div>
     </div>
 
+    <!-- Bubble Berry -->
+    <div class="product-card product-card-bubbleberry">
+      <div class="product-card-inner">
+        <div class="new-badge">✦ New</div>
+        <div class="product-bg-text">B</div>
+        <div class="product-tag">Natural Lip Balm</div>
+        <h3 class="product-name">Bubble<br><em>Berry</em></h3>
+        <p class="product-sub">Sweet · Playful · Nourishing</p>
+        <div class="product-notes">
+          <span class="note-pill">🫧 Bubblegum</span>
+          <span class="note-pill">🍓 Strawberry</span>
+          <span class="note-pill">🩷 Cocoa Butter</span>
+          <span class="note-pill">✨ Brightening</span>
+         <span class="note-pill">💧 hydrating</span>
+        </div>
+        <div class="product-footer">
+          <div class="product-price">300 <span>KES</span></div>
+          <a href="https://wa.me/254736019598?text=Hi!%20I'd%20like%20to%20order%20Bubble%20Berry%20lip%20balm" 
+             class="product-btn" target="_blank">Order via WhatsApp</a>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
-
-<!-- INGREDIENTS -->
 <section class="ingredients">
   <div>
     <p class="section-eyebrow">What's inside</p>
@@ -943,6 +1031,16 @@
       <div class="ingredient-name">Almond Oil</div>
       <p class="ingredient-desc">Lightweight and silky. High in vitamin E for soft, smooth, healthy-looking lips.</p>
     </div>
+    <div class="ingredient-item">
+      <span class="ingredient-icon">🌻</span>
+      <div class="ingredient-name">Sunflower Oil</div>
+      <p class="ingredient-desc">Packed with vitamins A, D & E. Deeply conditions lips, reduces inflammation and helps repair the skin barrier.</p>
+    </div>
+    <div class="ingredient-item">
+      <span class="ingredient-icon">🍫</span>
+      <div class="ingredient-name">Cocoa Butter</div>
+      <p class="ingredient-desc">A rich emollient loaded with antioxidants. Melts into lips to seal in moisture and visibly improve texture over time.</p>
+    </div>
   </div>
 </section>
 
@@ -961,13 +1059,13 @@
     <h2 class="section-title" style="margin-bottom:2rem;">Skin love,<br><em>bottled.</em></h2>
     <p class="story-body">Solana was born from a personal experience, where a makeup loving friend struggled to find the right product that wouldn't damage her skin. As a result we came up with idea for an all natural healing brand focused on lipcare at the moment. Most lipbalms sit on the surface, fade fast, and ignore real problems like pigmentation and dryness.</p>
     <p class="story-body">We changed that. Every Solana balm is crafted with active brightening ingredients and deeply healing botanicals, so your lips don't just feel good - they actually get better over time. A solution for sensitive lips offering extra care and healing to your barrier.</p>
-    <div class="story-stat-row"
+    <div class="story-stat-row">
       <div>
         <div class="story-stat-num">100%</div>
-        <div class="story-stat-label">Natural Base</div>
+        <div class="story-stat-label">Natural Base </div>
       </div>
       <div>
-        <div class="story-stat-num">2</div>
+        <div class="story-stat-num">3</div>
         <div class="story-stat-label">Signature Scents</div>
       </div>
       <div>
@@ -981,7 +1079,7 @@
 <!-- ORDER -->
 <section class="order" id="order">
   <h2 class="order-title">Ready for <em>softer</em> lips?</h2>
-  <p class="order-sub">Order now · Delivery available via pickup mtaani · KES 300 each</p>
+  <p class="order-sub">Order now · Delivery available mtaani · KES 300 each</p>
   <div class="order-options">
     <a href="https://wa.me/254736019598?text=Hi!%20I'd%20like%20to%20order%20a%20Solana%20lip%20balm" 
        class="order-btn order-btn-primary" target="_blank">
@@ -992,7 +1090,7 @@
       📸 Follow on Instagram
     </a>
   </div>
-  <p class="order-note">+254 736 019 598 &nbsp;·&nbsp; DM us on Instagram &nbsp;·&nbsp; Pickup & delivery available countrywide</p>
+  <p class="order-note">+254 736 019 598 &nbsp;·&nbsp; DM us on Instagram &nbsp;·&nbsp; Pickup & delivery available</p>
 </section>
 
 <!-- FOOTER -->
