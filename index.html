@@ -448,6 +448,28 @@ nav{background:rgba(247,237,228,.94);backdrop-filter:blur(14px);padding:.85rem 3
 .receipt-lines{display:grid;gap:.35rem;font-size:.82rem}.receipt-line{display:flex;justify-content:space-between;gap:1rem}.receipt-total{border-top:1px dashed #d7a6b7;padding-top:.6rem;margin-top:.6rem;font-weight:800;display:flex;justify-content:space-between}
 .receipt-foot{font-size:.7rem;color:#8a655b;margin-top:.7rem}
 @media(prefers-reduced-motion:reduce){.shipping-step .shipping-icon{animation:none!important}}
+/* Rich ingredient-world artwork around the real packaging silhouettes */
+.flavour-art{isolation:isolate;overflow:hidden;height:225px;border:1px solid #ffffff99;box-shadow:inset 0 -18px 35px #35170f12,0 10px 18px #35170f12}
+.flavour-art:before{z-index:0;font-size:4.5rem;filter:drop-shadow(0 8px 4px #35170f25)}
+.flavour-art:after{z-index:0}
+.tube-visual{z-index:4;width:58px;height:145px;transform:rotate(-8deg);box-shadow:10px 18px 20px #35170f35, inset 4px 0 6px #ffffff66}
+.tube-visual:before{z-index:2}
+.flavour-art .ingredient{position:absolute;z-index:2;display:block;filter:drop-shadow(0 8px 5px #35170f25);pointer-events:none}
+.flavour-art.vanilla{background:radial-gradient(ellipse at 52% 83%,#fff4d7 0 16%,transparent 17%),radial-gradient(ellipse at 45% 45%,#fff8e5 0 22%,#f6d59a 42%,#d5a35d 63%,#f5dfb9 100%)}
+.flavour-art.vanilla .butter-melt{position:absolute;inset:0;z-index:1;background:linear-gradient(155deg,transparent 22%,#fff2c9 23% 32%,transparent 33%),radial-gradient(ellipse at 48% 100%,#fff0c6 0 24%,transparent 25%);clip-path:polygon(0 0,100% 0,100% 75%,88% 71%,80% 84%,68% 77%,55% 94%,43% 80%,29% 92%,15% 78%,0 88%);opacity:.95}
+.flavour-art.vanilla .coffee-beans{left:10px;top:18px;font-size:2.4rem;transform:rotate(-20deg)}
+.flavour-art.vanilla .vanilla-flower{right:8px;top:12px;font-size:2.2rem}
+.flavour-art.vanilla .chocolate-drip{position:absolute;z-index:2;right:0;bottom:0;width:100%;height:44px;background:#603321;clip-path:polygon(0 38%,13% 25%,20% 45%,31% 18%,40% 52%,52% 10%,61% 45%,72% 21%,84% 48%,92% 24%,100% 35%,100% 100%,0 100%);opacity:.88}
+.flavour-art.mint{background:radial-gradient(ellipse at 50% 80%,#e3ffe3 0 13%,transparent 14%),radial-gradient(ellipse at 50% 48%,#c9ffd0 0,#64c87e 40%,#16804b 68%,#07452c 100%)}
+.flavour-art.mint .mint-leaf{font-size:3.1rem;left:3px;top:20px;transform:rotate(-30deg)}
+.flavour-art.mint .mint-leaf.two{left:auto;right:4px;top:48px;font-size:2.8rem;transform:rotate(30deg)}
+.flavour-art.mint .ice{font-size:2rem;bottom:9px;left:14px}
+.flavour-art.mint .mist{position:absolute;inset:0;z-index:1;background:radial-gradient(ellipse at 15% 40%,#e5fff899 0 10%,transparent 28%),radial-gradient(ellipse at 88% 30%,#e5fff888 0 8%,transparent 27%);filter:blur(3px)}
+.flavour-art.berry{background:radial-gradient(ellipse at 50% 80%,#ffebf5 0 13%,transparent 14%),radial-gradient(ellipse at 50% 45%,#ffc4e1 0,#f875b3 38%,#d72f7e 70%,#7e164b 100%)}
+.flavour-art.berry .bubble{border-radius:50%;border:2px solid #fff9;box-shadow:inset -5px -7px 10px #c52b7655,inset 4px 4px 9px #fff9,0 8px 10px #76154233;background:radial-gradient(circle at 30% 25%,#fff 0 7%,#ffd5ec 10%,#f88dc7 60%,#d93a91 100%)}
+.flavour-art.berry .bubble.one{width:52px;height:52px;left:9px;top:18px}.flavour-art.berry .bubble.two{width:35px;height:35px;right:9px;top:54px}.flavour-art.berry .bubble.three{width:23px;height:23px;left:27px;bottom:15px}
+.flavour-art.berry .berries{font-size:2.1rem;right:4px;bottom:6px}
+@media(max-width:768px){.flavour-art{height:215px}}
 </style>
 </head>
 <body>
@@ -514,7 +536,7 @@ nav{background:rgba(247,237,228,.94);backdrop-filter:blur(14px);padding:.85rem 3
     <div class="product-card product-card-vanilla">
       <div class="product-card-inner">
         <div class="product-bg-text">V</div>
-        <div class="flavour-art vanilla"><div class="tube-visual tube-vanilla"><span>FRENCH VANILLA</span></div></div><div class="product-tag">The cozy one</div>
+        <div class="flavour-art vanilla"><span class="ingredient coffee-beans">☕</span><span class="ingredient vanilla-flower">🌼</span><div class="butter-melt"></div><div class="chocolate-drip"></div><div class="tube-visual tube-vanilla"><span>FRENCH VANILLA</span></div></div><div class="product-tag">The cozy one</div>
         <h3 class="product-name">French<br><em>Vanilla</em></h3>
         <p class="product-sub">Warm · Indulgent · Healing</p>
         <div class="product-notes">
@@ -529,7 +551,7 @@ nav{background:rgba(247,237,228,.94);backdrop-filter:blur(14px);padding:.85rem 3
     <div class="product-card product-card-peppermint">
       <div class="product-card-inner">
         <div class="product-bg-text">P</div>
-        <div class="flavour-art mint"><div class="tube-visual tube-mint"><span>PEPPERMINT</span></div></div><div class="product-tag">The fresh one</div>
+        <div class="flavour-art mint"><span class="ingredient mint-leaf">🌿</span><span class="ingredient mint-leaf two">🌱</span><span class="ingredient ice">🧊</span><div class="mist"></div><div class="tube-visual tube-mint"><span>PEPPERMINT</span></div></div><div class="product-tag">The fresh one</div>
         <h3 class="product-name">Pepper<br><em>mint</em></h3>
         <p class="product-sub">Fresh · Cool · Reviving</p>
         <div class="product-notes">
@@ -545,7 +567,7 @@ nav{background:rgba(247,237,228,.94);backdrop-filter:blur(14px);padding:.85rem 3
       <div class="product-card-inner">
         <div class="new-badge">✦ New</div>
         <div class="product-bg-text">B</div>
-        <div class="flavour-art berry"><div class="tube-visual tube-berry"><span>BUBBLE BERRY</span></div></div><div class="product-tag">The playful one</div>
+        <div class="flavour-art berry"><span class="ingredient berries">🍓 🫐</span><span class="ingredient bubble one"></span><span class="ingredient bubble two"></span><span class="ingredient bubble three"></span><div class="tube-visual tube-berry"><span>BUBBLE BERRY</span></div></div><div class="product-tag">The playful one</div>
         <h3 class="product-name">Bubble<br><em>Berry</em></h3>
         <p class="product-sub">Sweet · Playful · Nourishing</p>
         <div class="product-notes">
