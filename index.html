@@ -505,46 +505,53 @@ nav{background:rgba(247,237,228,.94);backdrop-filter:blur(14px);padding:.85rem 3
 }
 
 
-/* Let the basket grow with every added product, pushing all following details down */
+/* Basket stays in normal document flow and grows with its contents */
+.order,
 .order-summary,
 #orderSummary,
-#cartReceipt{
+#cartReceipt,
+#cartReceipt .receipt-lines{
   box-sizing:border-box;
   height:auto !important;
   min-height:0 !important;
   max-height:none !important;
   overflow:visible !important;
 }
-.order-summary{
-  display:flex;
-  flex-direction:column;
-  align-items:stretch;
-  position:relative;
-  isolation:isolate;
-}
+#order{display:block;overflow:visible !important}
+.order-summary{position:relative;display:flex;align-items:center;flex-wrap:wrap}
 #cartReceipt{
   display:none;
+  position:static !important;
+  float:none !important;
+  clear:both;
   width:100%;
-  flex:0 0 auto;
-  position:relative;
-  z-index:1;
-  margin:1rem 0 0;
+  margin:1rem auto 2rem;
+  transform:none !important;
+  animation:none !important;
   scroll-margin-top:110px;
 }
-#cartReceipt.visible{display:block;animation:none}
+#cartReceipt.visible{
+  display:block !important;
+  position:static !important;
+  transform:none !important;
+  animation:none !important;
+}
 #cartReceipt .receipt-lines{
   display:grid;
   grid-auto-rows:auto;
-  height:auto !important;
-  min-height:0 !important;
-  max-height:none !important;
-  overflow:visible !important;
+  width:100%;
 }
-#cartReceipt .receipt-line{min-height:0;height:auto}
-#cartReceipt .receipt-line.bag-item{position:relative}
+#cartReceipt .receipt-line,
+#cartReceipt .receipt-line.bag-item{
+  position:static;
+  height:auto;
+  min-height:0;
+}
 #cartReceipt .mpesa-checkout,
 #cartReceipt .receipt-total{flex-shrink:0}
-.order{overflow:visible}
+.order-options{position:relative;display:flex;clear:both;margin-top:1rem}
+.order-note{position:relative;clear:both}
+.order::before{pointer-events:none}
 
 .order{overflow:visible}
 #cartReceipt{max-height:none;height:auto;overflow:visible;scroll-margin-top:110px;position:relative;z-index:1}
