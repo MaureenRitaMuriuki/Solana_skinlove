@@ -557,6 +557,255 @@ nav{background:rgba(247,237,228,.94);backdrop-filter:blur(14px);padding:.85rem 3
 #cartReceipt{max-height:none;height:auto;overflow:visible;scroll-margin-top:110px;position:relative;z-index:1}
 #cartReceipt .receipt-lines{max-height:none;height:auto;overflow:visible}
 #cartReceipt .receipt-line{min-height:0}
+
+/* SOLANA — quiet luxury art direction */
+:root{
+ --cream:#F3F0E8;--dark:#211F19;--gold:#9A8662;--gold-light:#D2C4A6;
+ --brown:#5B5548;--muted:#938B7D;--white:#FBFAF6;
+ --olive:#626650;--line:rgba(69,63,51,.18);
+}
+html{scroll-padding-top:88px}
+body{background:var(--cream);color:var(--dark);font-family:'Jost',sans-serif;letter-spacing:.01em}
+body::before{opacity:.16}
+::selection{background:#b7ad95;color:#211f19}
+nav{
+ padding:1.2rem 4.5vw;background:rgba(243,240,232,.94);backdrop-filter:blur(18px);
+ mix-blend-mode:normal;border-bottom:1px solid rgba(70,64,52,.12)
+}
+.nav-logo{font-size:1.12rem;letter-spacing:.18em;font-weight:500}
+.nav-logo i{font-weight:300}
+.brand-symbol{width:34px;height:34px;vertical-align:middle;margin-right:.55rem}
+.brand-symbol path{fill:#9A8662!important}.brand-symbol circle:last-child{fill:#5B5548!important}
+.nav-links{gap:clamp(1rem,2.3vw,2.4rem)}
+.nav-links a{font-size:.62rem;letter-spacing:.17em;color:#5b5548}
+.nav-links a:hover{color:#9a8662}
+.hero{min-height:94vh;grid-template-columns: .92fr 1.08fr;padding-top:68px;background:#e9e4d9}
+.hero-left{
+ background:#29271f;padding:8rem clamp(2rem,6.4vw,7rem) 5rem;
+}
+.hero-left::after{width:560px;height:560px;right:-260px;bottom:-280px;background:radial-gradient(circle,rgba(185,169,132,.18),transparent 68%)}
+.hero-eyebrow,.section-eyebrow,.reviews-eyebrow{
+ color:#b8a783;letter-spacing:.28em;font-size:.61rem
+}
+.hero-title{font-size:clamp(3.5rem,6.3vw,6.8rem);line-height:.98;letter-spacing:-.035em;margin-bottom:2rem}
+.hero-title em{color:#d5c9b0}
+.hero-desc{font-size:.88rem;line-height:2;color:rgba(251,250,246,.72);max-width:390px}
+.hero-cta{
+ background:#c4b596;color:#29271f;padding:1.05rem 1.65rem;
+ font-size:.62rem;letter-spacing:.18em;border:1px solid #c4b596
+}
+.hero-cta:hover{background:transparent;color:#e6dcc8;transform:translateY(-2px)}
+.hero-right{
+ background:#d8d0c0 url('https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=1500&q=88') center 35%/cover no-repeat;
+ min-height:650px;isolation:isolate
+}
+.hero-right::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(32,29,23,.08),rgba(32,29,23,.05) 40%,rgba(32,29,23,.18));z-index:-1}
+.hero-product-display{height:440px;gap:22px;align-items:flex-end;padding:0 1rem 1.2rem}
+.balm-card{
+ width:82px;border-radius:3px;background:linear-gradient(100deg,#e9e2d3,#bdb29b 48%,#eee8db);
+ box-shadow:0 24px 45px rgba(25,22,17,.26),inset 1px 0 2px #fff;gap:.65rem
+}
+.balm-card-1{height:235px;margin-bottom:32px}
+.balm-card-2{height:280px;background:linear-gradient(100deg,#33362d,#777b65 48%,#424638)}
+.balm-card-3{height:215px;margin-bottom:52px;background:linear-gradient(100deg,#d9cbbb,#a38d78 48%,#e8d9c9)}
+.balm-label,.balm-name{writing-mode:horizontal-tb;transform:none;text-orientation:initial;text-align:center}
+.balm-label{font-family:'Jost',sans-serif;font-size:.46rem;letter-spacing:.2em;color:#75684e}
+.balm-name{font-size:.76rem;color:#28261f;letter-spacing:0}
+.balm-card-2 .balm-label,.balm-card-2 .balm-name{color:#e9e4d7}
+.balm-card-3 .balm-label,.balm-card-3 .balm-name{color:#55483e}
+.balm-dot{width:4px;height:4px;background:#9a8662}
+.balm-card-3 .balm-dot{background:#9a8662}
+.hero-badge{width:76px;height:76px;top:-1rem;right:0;background:#f3f0e8;border-color:#9a8662}
+.hero-badge span{font-size:.48rem;color:#5b5548}.hero-badge strong{color:#8d7956}
+.marquee-wrap{background:#555947;padding:.9rem 0}
+.marquee-item{color:#f1ede3;font-size:.57rem;letter-spacing:.25em}
+.marquee-item::after{color:#c6b896}
+.fun-lab{background:#e8e4d9!important;color:#302e26!important;padding:6.5rem 5vw!important;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.fun-lab-head{align-items:end!important;margin-bottom:3rem!important}
+.fun-lab .section-title{color:#29271f}
+.fun-lab-head>p{color:#6e685b!important;font-family:'Cormorant Garamond',serif;font-size:1.15rem!important;line-height:1.7!important}
+.fun-lab-grid{gap:1rem!important}
+.lab-card{
+ background:#f5f2eb!important;border:1px solid #d7d0c1!important;border-radius:0!important;
+ padding:2rem!important;box-shadow:none!important;transition:transform .35s,border-color .35s
+}
+.lab-card:hover{transform:translateY(-4px);border-color:#9a8662!important}
+.lab-kicker{color:#8c7958!important;font-size:.58rem!important;letter-spacing:.2em!important}
+.lab-card h3{font-family:'Cormorant Garamond',serif!important;font-size:1.7rem!important;font-weight:400!important;color:#29271f!important}
+.lab-card p{color:#777064!important;line-height:1.8!important}
+.lab-button{background:#555947!important;color:#f8f5ed!important;border-radius:0!important;letter-spacing:.14em!important;font-size:.6rem!important;text-transform:uppercase;padding:.9rem 1.15rem!important}
+.lab-button:hover{background:#29271f!important;transform:translateY(-2px)}
+.lab-result{border-top:1px solid #d8d1c4!important;padding-top:1rem!important}
+.bag-checklist label{color:#625d51!important;border-bottom:1px solid #e4ded2!important}
+.bag-check{accent-color:#666b53}
+.bag-progress{background:#ddd7ca!important}.bag-progress span{background:#777b65!important}
+.sticky-ritual{background:#29271f!important;border:1px solid #8d7956!important;box-shadow:0 8px 30px #211f1926!important;color:#eee9dc!important}
+.sticky-ritual a{color:#d2c4a6!important}
+.products{padding:7.5rem 5vw;background:#f5f2eb}
+.section-header{margin-bottom:3.5rem}
+.section-title{color:#29271f;font-size:clamp(2.7rem,4.5vw,4.3rem);letter-spacing:-.025em}
+.section-title em{color:#8d7956}
+.section-line{background:#9a8662;width:76px}
+.products-grid{gap:1rem}
+.product-card{border:1px solid #ded8cb;background:#e9e4d9}
+.product-card-inner{padding:1.35rem;background:#e9e4d9!important;min-height:100%;transition:transform .5s}
+.product-card-vanilla .product-card-inner{background:#e8e1d3!important}
+.product-card-peppermint .product-card-inner{background:#dce0d3!important}
+.product-card-bubbleberry .product-card-inner{background:#e4d8cf!important}
+.product-card:hover .product-card-inner{transform:translateY(-5px)}
+.product-bg-text{color:#29271f;opacity:.07;font-size:9rem}
+.product-tag{color:#756447;border-color:#a99b7c;font-size:.55rem;letter-spacing:.2em}
+.product-name{color:#29271f!important;font-size:2.6rem}
+.product-name em{color:#827253!important}
+.product-sub{color:#766e61!important;letter-spacing:.13em}
+.product-notes{gap:.4rem;margin-bottom:2rem}
+.note-pill{background:rgba(255,255,255,.35)!important;border:1px solid rgba(111,99,75,.25)!important;color:#655b49!important;border-radius:0!important;font-size:.59rem}
+.product-price{color:#29271f!important;font-size:2.2rem}
+.product-price span{color:#847b6c!important}
+.product-btn{background:#555947!important;color:#f8f5ed!important;border-radius:0!important;font-size:.58rem;letter-spacing:.14em}
+.product-btn:hover{background:#29271f!important;color:#f8f5ed!important}
+.new-badge{background:#777b65!important;color:#fff!important;border-radius:0!important}
+.flavour-art{height:245px!important;border:0!important;box-shadow:none!important}
+.flavour-art.vanilla{background:linear-gradient(145deg,#e8ddc8,#c8b99d)!important}
+.flavour-art.mint{background:linear-gradient(145deg,#dce1d2,#9da58e)!important}
+.flavour-art.berry{background:linear-gradient(145deg,#e6d8cf,#b99c8c)!important}
+.flavour-art:before{opacity:.12}
+.tube-visual{width:62px;height:155px;border-radius:2px!important;box-shadow:10px 18px 22px #302a2030,inset 4px 0 6px #ffffff66!important}
+.ingredients{background:#e9e5da!important;padding:7rem 5vw}
+.ingredients::before{background:radial-gradient(circle,rgba(154,134,98,.1),transparent 70%)}
+.ingredients-grid{gap:1.2rem;margin-top:3rem}
+.ingredient-item{border-top:1px solid #c9c0ae;padding:2rem 1.2rem}
+.ingredient-icon{font-size:1.4rem;filter:grayscale(1);opacity:.72}
+.ingredient-name{font-size:1.45rem;color:#343127}
+.ingredient-desc{font-size:.75rem;color:#746d60;line-height:1.85}
+.story{padding:8rem 5vw;gap:5vw;background:#f5f2eb}
+.story-visual{height:540px}
+.story-block-1{
+ background:#777b65 url('https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=1000&q=85') center/cover;
+}
+.story-block-1::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(25,26,20,.08),rgba(25,26,20,.4))}
+.story-block-2{background:#c7b99f!important}
+.story-block-text{position:relative;z-index:1;color:#f6f1e7!important;font-size:1.45rem!important}
+.story-block-2 .story-block-text{color:#343127!important;font-size:1.15rem!important}
+.story-body{color:#625b4f;font-size:.88rem;line-height:2.05}
+.story-stat-row{border-color:#d8d0c1;gap:2.5rem}
+.story-stat-num{color:#8d7956;font-size:2.8rem}
+.story-stat-label{color:#827a6b;font-size:.58rem}
+.how-it-works{background:#555947!important;padding:6rem 5vw!important}
+.how-it-works .section-title{color:#f5f1e8}
+.how-it-works .section-title em{color:#d2c4a6}
+.how-head>p{color:#e0dacb!important;font-family:'Cormorant Garamond',serif;font-size:1.15rem!important}
+.shipping-track{gap:.75rem!important}
+.shipping-step{background:rgba(248,246,238,.07)!important;border:1px solid rgba(228,218,196,.22)!important;border-radius:0!important}
+.shipping-icon{filter:grayscale(1);opacity:.8}
+.shipping-num{color:#d2c4a6!important;letter-spacing:.2em}
+.shipping-step h3{font-family:'Cormorant Garamond',serif!important;color:#f5f1e8!important;font-size:1.35rem!important}
+.shipping-step p{color:#ded8ca!important}
+.shipping-cta{color:#d2c4a6!important;letter-spacing:.16em!important}
+.reviews{background:#29271f!important;padding:7rem 5vw}
+.reviews::before{background:radial-gradient(ellipse,rgba(185,169,132,.1),transparent 65%)}
+.reviews-title{color:#f5f1e8}
+.reviews-title em{color:#d2c4a6}
+.reviews-score-num,.reviews-score-stars{color:#c2b18e}
+.review-card{background:rgba(255,255,255,.035)!important;border:1px solid rgba(210,196,166,.2)!important;border-radius:0!important}
+.review-card:hover{border-color:#b8a783!important}
+.review-avatar{background:#c2b18e!important;color:#29271f!important}
+.review-name{color:#f5f1e8}
+.review-flavour{color:#c2b18e}
+.review-text{color:rgba(245,241,232,.74)}
+.review-quote-mark{color:rgba(210,196,166,.22)}
+.reviews-intro{color:rgba(245,241,232,.62)!important}
+.review-form{background:#e9e5da!important;border:1px solid #c9c0ae!important;border-radius:0!important}
+.review-form h3{font-family:'Cormorant Garamond',serif!important;color:#29271f!important}
+.review-form label,.rating-field legend{color:#625b4f!important}
+.review-form input,.review-form select,.review-form textarea{background:#f8f6f0!important;border:1px solid #d3cbbb!important;border-radius:0!important;color:#29271f!important}
+.rating-star{color:#a69b85!important}
+.rating-star.selected{color:#8d7956!important}
+.review-submit{background:#555947!important;color:#f8f5ed!important;border-radius:0!important;letter-spacing:.15em!important}
+.review-submit:hover{background:#29271f!important}
+.reviews-cta-btn{border-color:#a99b7c!important;color:#d2c4a6!important}
+.order{background:#29271f!important;padding:8rem 5vw}
+.order::before{background:radial-gradient(circle,rgba(185,169,132,.12),transparent 60%)}
+.order-title{color:#f5f1e8}
+.order-title em{color:#d2c4a6}
+.order-sub{color:rgba(245,241,232,.66)}
+.order-summary{background:#f0ece2!important;border:1px solid #b9ad96!important;border-radius:0!important;color:#29271f!important}
+.order-summary strong{color:#29271f!important}
+.order-summary p{color:#71695c!important}
+.summary-icon{color:#8d7956!important}
+.summary-total strong{color:#29271f!important}
+.order-btn{border-radius:0!important;letter-spacing:.16em!important}
+.order-btn-primary{background:#c2b18e!important;color:#29271f!important}
+.order-btn-primary:hover{background:#e0d6c1!important}
+.order-btn-secondary{border-color:#b9ad96!important;color:#f5f1e8!important}
+.order-btn-secondary:hover{color:#d2c4a6!important;border-color:#d2c4a6!important}
+.order-note{color:rgba(245,241,232,.52)!important}
+.cart-receipt{background:#f5f2eb!important;color:#29271f!important;border:1px solid #c9c0ae!important;border-radius:0!important;box-shadow:none!important}
+.receipt-brand{color:#555947!important}.receipt-label{color:#8d7956!important}
+.receipt-top,.receipt-total{border-color:#c9c0ae!important}
+.bag-visual-head{background:#e9e5da!important;border-color:#d4cbbb!important;border-radius:0!important}
+.bag-visual-head strong{color:#29271f!important}
+.bag-count{background:#d8d0c1!important;color:#555947!important;border-radius:0!important}
+.bag-qty{border-radius:0!important;border-color:#bdb39f!important;background:#f8f6f0!important;color:#29271f!important}
+.bag-remove,.empty-bag a{color:#746347!important}
+.mpesa-checkout{background:#e5e9df!important;border-color:#c5cdb9!important;border-radius:0!important}
+.mpesa-label,.copy-mpesa{color:#fff!important;background:#626650!important}
+.copy-mpesa{border-radius:0!important}
+.mpesa-number-row{border-radius:0!important}
+.bag-confirm-order{background:#555947!important;color:#fff!important}
+footer{background:#1c1b16!important;padding:3rem 5vw;border-top:1px solid rgba(210,196,166,.2)}
+.footer-logo{color:#d2c4a6!important;letter-spacing:.17em}
+.footer-tagline,.footer-copy{color:rgba(245,241,232,.45)!important}
+.footer-links a{color:#e0dacb!important;letter-spacing:.12em}
+.footer-links a:hover{color:#d2c4a6!important}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid #9a8662!important;outline-offset:4px}
+@media(max-width:900px){
+ .hero{grid-template-columns:1fr;min-height:auto}
+ .hero-left{min-height:560px;padding:8rem 8vw 4rem}
+ .hero-right{min-height:520px}
+ .products-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .products-grid .product-card:last-child{grid-column:1/-1}
+ .story{grid-template-columns:1fr;gap:3rem}
+ .story-visual{max-width:640px;width:100%;margin:auto}
+}
+@media(max-width:680px){
+ nav{padding:.9rem 5vw;gap:1rem}
+ .nav-logo{font-size:.94rem;white-space:nowrap}
+ .brand-symbol{width:28px;height:28px}
+ .nav-links{gap:.85rem;overflow-x:auto;max-width:67vw;scrollbar-width:none}
+ .nav-links a{font-size:.52rem;letter-spacing:.1em;white-space:nowrap}
+ .hero-left{min-height:520px;padding:7rem 7vw 3.5rem}
+ .hero-title{font-size:clamp(3.2rem,14vw,5rem)}
+ .hero-right{min-height:410px;padding:5rem 5vw 2.5rem}
+ .hero-product-display{height:300px;gap:12px}
+ .balm-card{width:67px}
+ .balm-card-1{height:190px}.balm-card-2{height:225px}.balm-card-3{height:175px}
+ .hero-badge{width:65px;height:65px;right:0;top:-1.8rem}
+ .fun-lab,.products,.ingredients,.story,.how-it-works,.reviews,.order{padding-left:6vw!important;padding-right:6vw!important}
+ .fun-lab-grid,.ingredients-grid,.reviews-grid{grid-template-columns:1fr!important}
+ .products-grid{grid-template-columns:1fr}
+ .products-grid .product-card:last-child{grid-column:auto}
+ .section-header,.reviews-header{align-items:flex-start;gap:1.5rem;flex-direction:column}
+ .section-header>div:last-child{display:none}
+ .story-visual{height:390px}
+ .story-block-1{width:75%;height:72%}
+ .story-block-2{width:58%;height:50%}
+ .story-stat-row{gap:1.2rem;flex-wrap:wrap}
+ .story-stat-num{font-size:2.2rem}
+ .shipping-track{grid-template-columns:1fr 1fr!important}
+ .reviews-header{margin-bottom:2rem}
+ .reviews-score-block{text-align:left}
+ .review-card-featured{display:block}
+ .review-card-featured .review-quote-mark{font-size:3rem}
+ .order-options{flex-direction:column;align-items:stretch}
+ .order-btn{justify-content:center}
+ footer{padding:2.5rem 6vw;flex-direction:column;align-items:flex-start;gap:1.5rem}
+ .footer-links{flex-wrap:wrap;gap:1rem}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+
 </style>
 </head>
 <body>
@@ -573,10 +822,10 @@ nav{background:rgba(247,237,228,.94);backdrop-filter:blur(14px);padding:.85rem 3
 
 <section class="hero" id="home">
   <div class="hero-left">
-    <p class="hero-eyebrow">KENYAN-MADE · ALL-NATURAL LIP CARE</p>
-    <h1 class="hero-title">Soft Lips.<br><em>Happy You.</em></h1>
-    <p class="hero-desc">All-natural, Kenyan-made unisex lip balms. Little tubes of lip love, made for your everyday ritual.</p>
-    <a href="#order" class="hero-cta">Find your balm <span>→</span></a>
+    <p class="hero-eyebrow">A CONSIDERED RITUAL · MADE IN NAIROBI</p>
+    <h1 class="hero-title">The art of<br><em>a softer ritual.</em></h1>
+    <p class="hero-desc">Thoughtfully made in Nairobi, our lip balms bring a little intention to the everyday. A considered essential, wherever the day takes you.</p>
+    <a href="#order" class="hero-cta">Discover the collection <span>↗</span></a>
   </div>
   <div class="hero-right">
     <div class="hero-product-display">
@@ -596,23 +845,23 @@ nav{background:rgba(247,237,228,.94);backdrop-filter:blur(14px);padding:.85rem 3
 
 <div class="marquee-wrap">
   <div class="marquee-track">
-    <span class="marquee-item">Natural Ingredients</span><span class="marquee-item">Brightening Formula</span><span class="marquee-item">Handcrafted in Nairobi</span><span class="marquee-item">Shea Butter &amp; Beeswax</span><span class="marquee-item">Alpha Arbutin</span><span class="marquee-item">For All Genders</span><span class="marquee-item">Natural Ingredients</span><span class="marquee-item">Brightening Formula</span><span class="marquee-item">Handcrafted in Nairobi</span><span class="marquee-item">Shea Butter &amp; Beeswax</span><span class="marquee-item">Alpha Arbutin</span><span class="marquee-item">For All Genders</span>
+    <span class="marquee-item">Thoughtful Ingredients</span><span class="marquee-item">Everyday Lip Care</span><span class="marquee-item">Made with Care in Nairobi</span><span class="marquee-item">Shea Butter &amp; Beeswax</span><span class="marquee-item">Alpha Arbutin</span><span class="marquee-item">Made for Everyone</span><span class="marquee-item">Natural Ingredients</span><span class="marquee-item">Brightening Formula</span><span class="marquee-item">Handcrafted in Nairobi</span><span class="marquee-item">Shea Butter &amp; Beeswax</span><span class="marquee-item">Alpha Arbutin</span><span class="marquee-item">For All Genders</span>
   </div>
 </div>
 
 
-<section class="fun-lab" id="solana-lab"><div class="fun-lab-head"><div><p class="section-eyebrow">A tiny bit of lip-care chaos</p><h2 class="section-title">Welcome to the <em>Solana Lab.</em></h2></div><p style="max-width:330px;line-height:1.7;color:#603A35;font-size:.82rem">No 20-minute quizzes. Just silly little ways to find your balm, build your ritual, and have a bit of fun.</p></div><div class="fun-lab-grid">
-<article class="lab-card"><span class="lab-kicker">01 / The balm oracle 🔮</span><h3>Let the universe pick.</h3><p>Indecisive? Tap once and let your next lip-care mood choose itself. Every balm is KES 300.</p><button class="lab-button" type="button" id="oracleButton">Reveal my fate ✨</button><p class="lab-result" id="oracleResult" aria-live="polite">Your destiny is currently moisturising.</p></article>
-<article class="lab-card"><span class="lab-kicker">02 / Bag check 👜</span><h3>What’s in your lip-care era?</h3><p>Tick the things that sound like you. A vibe check, not a skin diagnosis.</p><div class="bag-checklist"><label><input type="checkbox" class="bag-check"> I lose lip balm weekly</label><label><input type="checkbox" class="bag-check"> One lives in every bag</label><label><input type="checkbox" class="bag-check"> I love a sweet scent</label><label><input type="checkbox" class="bag-check"> I want a fresh feel</label><label><input type="checkbox" class="bag-check"> I share with my person</label><label><input type="checkbox" class="bag-check"> I’m building a routine</label></div><div class="bag-progress"><span id="bagProgress"></span></div><p class="lab-result" id="bagResult" aria-live="polite">0/6 checked. Start your lip-care lore.</p></article>
+<section class="fun-lab" id="solana-lab"><div class="fun-lab-head"><div><p class="section-eyebrow">The Solana Edit</p><h2 class="section-title">A more personal <em>lip ritual.</em></h2></div><p style="max-width:330px;line-height:1.7;color:#603A35;font-size:.82rem">Discover the flavour that feels like you, build your everyday edit, and find a little moment of care.</p></div><div class="fun-lab-grid">
+<article class="lab-card"><span class="lab-kicker">01 / The balm oracle 🔮</span><h3>Find your signature.</h3><p>A considered choice, made simple. Let the Solana edit introduce you to a new favourite.</p><button class="lab-button" type="button" id="oracleButton">Make my selection</button><p class="lab-result" id="oracleResult" aria-live="polite">Your next favourite is waiting.</p></article>
+<article class="lab-card"><span class="lab-kicker">02 / Bag check 👜</span><h3>Your everyday essentials.</h3><p>Tick the things that sound like you. A small edit of the things you carry.</p><div class="bag-checklist"><label><input type="checkbox" class="bag-check"> I lose lip balm weekly</label><label><input type="checkbox" class="bag-check"> One lives in every bag</label><label><input type="checkbox" class="bag-check"> I love a sweet scent</label><label><input type="checkbox" class="bag-check"> I want a fresh feel</label><label><input type="checkbox" class="bag-check"> I share with my person</label><label><input type="checkbox" class="bag-check"> I’m building a routine</label></div><div class="bag-progress"><span id="bagProgress"></span></div><p class="lab-result" id="bagResult" aria-live="polite">0/6 checked. Start your lip-care lore.</p></article>
 
-<article class="lab-card"><span class="lab-kicker">03 / The three-balm challenge 🩷</span><h3>One for every kind of day.</h3><p>Cozy mornings, fresh starts, playful afternoons. Add all three and see your total before ordering.</p><button type="button" class="lab-button" id="trioButton">Build my trio · KES 900</button><p class="lab-result" id="trioResult" aria-live="polite">French Vanilla + Peppermint + Bubble Berry</p></article>
-</div></section><div class="sticky-ritual" aria-label="Your shopping ritual"><span>✿ <strong id="stickyCount">0 balms</strong> · <span id="stickyTotal">KES 0</span></span><a href="#order">View my ritual ↗</a></div>
+<article class="lab-card"><span class="lab-kicker">03 / The three-balm challenge 🩷</span><h3>The signature trio.</h3><p>Three distinct scents, one considered collection. Bring all three into your daily ritual.</p><button type="button" class="lab-button" id="trioButton">Choose the trio · KES 900</button><p class="lab-result" id="trioResult" aria-live="polite">French Vanilla + Peppermint + Bubble Berry</p></article>
+</div></section><div class="sticky-ritual" aria-label="Your shopping ritual"><span>✿ <strong id="stickyCount">0 balms</strong> · <span id="stickyTotal">KES 0</span></span><a href="#order">View your selection ↗</a></div>
 
 <section class="products" id="products">
   <div class="section-header">
     <div>
       <p class="section-eyebrow">The Collection</p>
-      <h2 class="section-title">Three <em>scents,</em><br>one obsession.</h2>
+      <h2 class="section-title">The collection,<br><em>considered.</em></h2>
     </div>
     <div>
       <div class="section-line"></div>
@@ -631,7 +880,7 @@ nav{background:rgba(247,237,228,.94);backdrop-filter:blur(14px);padding:.85rem 3
         </div>
         <div class="product-footer">
           <div class="product-price">300 <span>KES</span></div>
-          <button type="button" class="product-btn add-to-cart" data-product="French Vanilla">＋ Add to my ritual</button>
+          <button type="button" class="product-btn add-to-cart" data-product="French Vanilla">＋ Add to bag</button>
         </div>
       </div>
     </div>
@@ -673,7 +922,7 @@ nav{background:rgba(247,237,228,.94);backdrop-filter:blur(14px);padding:.85rem 3
 <section class="ingredients">
   <div>
     <p class="section-eyebrow">What's inside</p>
-    <h2 class="section-title">Ingredients you <em>deserve.</em></h2>
+    <h2 class="section-title">The ingredients,<br><em>thoughtfully chosen.</em></h2>
   </div>
   <div class="ingredients-grid">
     <div class="ingredient-item"><span class="ingredient-icon">🫐</span><div class="ingredient-name">Alpha Arbutin</div><p class="ingredient-desc">A popular skincare ingredient known for brightening-focused formulations. Check suitability for your own lip-care routine.</p></div>
@@ -687,12 +936,12 @@ nav{background:rgba(247,237,228,.94);backdrop-filter:blur(14px);padding:.85rem 3
 
 <section class="story" id="story">
   <div class="story-visual">
-    <div class="story-block-1"><div class="story-block-text">"Made with intention,<br>worn with confidence."</div></div>
-    <div class="story-block-2"><div class="story-block-text">Handcrafted<br>in Nairobi<br>with love 🖤</div></div>
+    <div class="story-block-1"><div class="story-block-text">"Made with intention.<br>Kept close, every day."</div></div>
+    <div class="story-block-2"><div class="story-block-text">Thoughtfully made<br>in Nairobi.</div></div>
   </div>
   <div class="story-content">
     <p class="section-eyebrow">Our Story</p>
-    <h2 class="section-title" style="margin-bottom:2rem;">Skin love,<br><em>bottled.</em></h2>
+    <h2 class="section-title" style="margin-bottom:2rem;">A softer kind<br><em>of everyday.</em></h2>
     <p class="story-body">Solana Skin Love started with someone close to me. My friend was struggling with eczema and finding products that didn't react with her skin felt frustrating. As a makeup artist, it hurt to see how difficult it was for her to find a lip-care option she could feel comfortable using before makeup.</p>
 <p class="story-body">That sparked an idea: create a simple, thoughtful layer of lip care for her, for me (I'm very picky about what goes on my lips), and for others who want to be more intentional about their routine. We make Kenyan-made, all-natural unisex lip balms with care, personality, and comfort in mind. Our balms are lip care—not eczema treatment—and we encourage everyone with sensitive skin to check ingredients and patch-test first.</p>
     <div class="story-stat-row">
@@ -703,9 +952,9 @@ nav{background:rgba(247,237,228,.94);backdrop-filter:blur(14px);padding:.85rem 3
   </div>
 </section>
 
-<!-- REVIEWS --><section class="how-it-works" id="how-it-works"><div class="how-head"><div><p class="section-eyebrow">From our hands to yours</p><h2 class="section-title">A little balm.<br><em>A whole journey.</em></h2></div><p style="max-width:320px;line-height:1.7;color:#ffd4e4;font-size:.82rem">Your order deserves a tiny celebration. Here’s how your Solana ritual goes from “add to basket” to your doorstep.</p></div><div class="shipping-track"><article class="shipping-step"><span class="shipping-icon">🛒</span><span class="shipping-num">STEP 01</span><h3>Choose your balm</h3><p>Add your favourites to the basket.</p></article><article class="shipping-step"><span class="shipping-icon">🧾</span><span class="shipping-num">STEP 02</span><h3>Your receipt</h3><p>Review your order and estimated total.</p></article><article class="shipping-step"><span class="shipping-icon">🎁</span><span class="shipping-num">STEP 03</span><h3>We package</h3><p>Your balm is wrapped with care.</p></article><article class="shipping-step"><span class="shipping-icon">✈️</span><span class="shipping-num">STEP 04</span><h3>We ship</h3><p>A little plane takes your parcel on its way.</p></article><article class="shipping-step"><span class="shipping-icon">🏡</span><span class="shipping-num">STEP 05</span><h3>You receive</h3><p>Fresh lip-care joy, delivered.</p></article></div><p class="shipping-cta">✿ Kenyan-made · Unisex lip care · KES 300 per balm ✿</p></section>
-<section class="reviews" id="reviews"><div class="reviews-header"><div class="reviews-header-left"><p class="reviews-eyebrow">The Solana love notes</p><h2 class="reviews-title">Your lips.<br>Your <em>words.</em></h2><p class="reviews-intro">Tried a balm? Tell the community what you think. Honest feedback helps a small Kenyan brand grow.</p></div><div class="reviews-score-block"><span class="reviews-score-num" id="reviewAverage">—</span><span class="reviews-score-stars" id="reviewAverageStars">☆☆☆☆☆</span><span class="reviews-score-label" id="reviewCount">No reviews yet · Be the first</span></div></div><div class="review-layout"><div class="reviews-feed"><div class="reviews-grid" id="reviewsGrid"><div class="reviews-empty"><span>✿</span><h3>It’s a fresh page.</h3><p>Be the first to leave a Solana love note. Your rating and review will appear here.</p></div></div></div><form class="review-form" id="reviewForm"><p class="form-eyebrow">Leave a love note</p><h3>Your experience, in your words.</h3><label for="reviewName">Your name or initials</label><input id="reviewName" name="name" maxlength="50" placeholder="e.g. M. or Maya" required><label for="reviewProduct">Which balm did you try?</label><select id="reviewProduct" name="product" required><option value="">Choose your balm</option><option>French Vanilla</option><option>Peppermint</option><option>Bubble Berry</option></select><fieldset class="rating-field"><legend>Your rating</legend><div class="rating-picker" role="radiogroup" aria-label="Rate from one to five stars"><button type="button" class="rating-star" data-rating="1" aria-label="1 star" aria-pressed="false">★</button><button type="button" class="rating-star" data-rating="2" aria-label="2 stars" aria-pressed="false">★</button><button type="button" class="rating-star" data-rating="3" aria-label="3 stars" aria-pressed="false">★</button><button type="button" class="rating-star" data-rating="4" aria-label="4 stars" aria-pressed="false">★</button><button type="button" class="rating-star" data-rating="5" aria-label="5 stars" aria-pressed="false">★</button></div><p id="ratingHint" class="rating-hint">Tap a star to rate from 1 to 5.</p></fieldset><label for="reviewText">Your review</label><textarea id="reviewText" name="review" maxlength="600" rows="4" placeholder="What did you love, notice, or think we could improve?" required></textarea><button class="review-submit" type="submit">Post my love note ↗</button><p class="review-form-status" id="reviewStatus" aria-live="polite"></p></form></div></section>
-<section class="order" id="order"><p class="section-eyebrow">Your little ritual starts here</p><h2 class="order-title">Your bag, <em>your ritual.</em></h2><p class="order-sub">Review your picks, check your total, and follow the M-PESA checkout steps below.</p><div class="order-summary" id="orderSummary"><span class="summary-icon">✿</span><div><strong id="cartHeadline">Your ritual is waiting</strong><p id="cartDetails">Add a balm above and we’ll prepare your order.</p></div><div class="summary-total"><small>EST. TOTAL</small><strong id="cartTotal">KES 0</strong></div></div><div class="cart-receipt" id="cartReceipt" aria-live="polite"></div><div class="order-options"><a href="sms:+254736019598?body=Hi%20Solana%20Skin%20Love%21" id="smsOrder" class="order-btn order-btn-primary">✉ Text my order</a><a href="https://www.instagram.com/solana_skinlove" class="order-btn order-btn-secondary" target="_blank" rel="noopener noreferrer">♡ Order via Instagram DM</a></div><p class="order-note">Call or SMS +254 736 019 598 · Instagram @solana_skinlove · Pickup & delivery availability confirmed when ordering</p></section>
+<!-- REVIEWS --><section class="how-it-works" id="how-it-works"><div class="how-head"><div><p class="section-eyebrow">A considered experience</p><h2 class="section-title">From our hands<br><em>to your home.</em></h2></div><p style="max-width:320px;line-height:1.7;color:#ffd4e4;font-size:.82rem">A few thoughtful steps bring your Solana order from selection to delivery.</p></div><div class="shipping-track"><article class="shipping-step"><span class="shipping-icon">🛒</span><span class="shipping-num">STEP 01</span><h3>Select your balm</h3><p>Add your favourites to the basket.</p></article><article class="shipping-step"><span class="shipping-icon">🧾</span><span class="shipping-num">STEP 02</span><h3>Your receipt</h3><p>Review your order and estimated total.</p></article><article class="shipping-step"><span class="shipping-icon">🎁</span><span class="shipping-num">STEP 03</span><h3>We package</h3><p>Your balm is wrapped with care.</p></article><article class="shipping-step"><span class="shipping-icon">✈️</span><span class="shipping-num">STEP 04</span><h3>We ship</h3><p>A little plane takes your parcel on its way.</p></article><article class="shipping-step"><span class="shipping-icon">🏡</span><span class="shipping-num">STEP 05</span><h3>You receive</h3><p>Fresh lip-care joy, delivered.</p></article></div><p class="shipping-cta">✿ Kenyan-made · Unisex lip care · KES 300 per balm ✿</p></section>
+<section class="reviews" id="reviews"><div class="reviews-header"><div class="reviews-header-left"><p class="reviews-eyebrow">Notes from our community</p><h2 class="reviews-title">A word from<br><em>you.</em></h2><p class="reviews-intro">Tried a balm? Tell the community what you think. Honest feedback helps a small Kenyan brand grow.</p></div><div class="reviews-score-block"><span class="reviews-score-num" id="reviewAverage">—</span><span class="reviews-score-stars" id="reviewAverageStars">☆☆☆☆☆</span><span class="reviews-score-label" id="reviewCount">No reviews yet · Be the first</span></div></div><div class="review-layout"><div class="reviews-feed"><div class="reviews-grid" id="reviewsGrid"><div class="reviews-empty"><span>✿</span><h3>It’s a fresh page.</h3><p>Be the first to leave a Solana love note. Your rating and review will appear here.</p></div></div></div><form class="review-form" id="reviewForm"><p class="form-eyebrow">Leave a love note</p><h3>Your experience matters.</h3><label for="reviewName">Your name or initials</label><input id="reviewName" name="name" maxlength="50" placeholder="e.g. M. or Maya" required><label for="reviewProduct">Which balm did you try?</label><select id="reviewProduct" name="product" required><option value="">Choose your balm</option><option>French Vanilla</option><option>Peppermint</option><option>Bubble Berry</option></select><fieldset class="rating-field"><legend>Your rating</legend><div class="rating-picker" role="radiogroup" aria-label="Rate from one to five stars"><button type="button" class="rating-star" data-rating="1" aria-label="1 star" aria-pressed="false">★</button><button type="button" class="rating-star" data-rating="2" aria-label="2 stars" aria-pressed="false">★</button><button type="button" class="rating-star" data-rating="3" aria-label="3 stars" aria-pressed="false">★</button><button type="button" class="rating-star" data-rating="4" aria-label="4 stars" aria-pressed="false">★</button><button type="button" class="rating-star" data-rating="5" aria-label="5 stars" aria-pressed="false">★</button></div><p id="ratingHint" class="rating-hint">Tap a star to rate from 1 to 5.</p></fieldset><label for="reviewText">Your review</label><textarea id="reviewText" name="review" maxlength="600" rows="4" placeholder="What did you love, notice, or think we could improve?" required></textarea><button class="review-submit" type="submit">Post my love note ↗</button><p class="review-form-status" id="reviewStatus" aria-live="polite"></p></form></div></section>
+<section class="order" id="order"><p class="section-eyebrow">The Solana collection</p><h2 class="order-title">Make it <em>yours.</em></h2><p class="order-sub">Review your selection and follow the M-PESA instructions below.</p><div class="order-summary" id="orderSummary"><span class="summary-icon">✿</span><div><strong id="cartHeadline">Your ritual is waiting</strong><p id="cartDetails">Select a favourite above and we’ll prepare your order.</p></div><div class="summary-total"><small>EST. TOTAL</small><strong id="cartTotal">KES 0</strong></div></div><div class="cart-receipt" id="cartReceipt" aria-live="polite"></div><div class="order-options"><a href="sms:+254736019598?body=Hi%20Solana%20Skin%20Love%21" id="smsOrder" class="order-btn order-btn-primary">✉ Enquire to order</a><a href="https://www.instagram.com/solana_skinlove" class="order-btn order-btn-secondary" target="_blank" rel="noopener noreferrer">♡ Order via Instagram DM</a></div><p class="order-note">Call or SMS +254 736 019 598 · Instagram @solana_skinlove · Pickup & delivery availability confirmed when ordering</p></section>
 
 <footer>
   <div>
@@ -722,6 +971,6 @@ nav{background:rgba(247,237,228,.94);backdrop-filter:blur(14px);padding:.85rem 3
   <div class="footer-copy">© 2026 Solana Skin Love</div>
 </footer>
 
-<script>(()=>{const products={"French Vanilla":{price:300,description:"Your cozy pick: warm, soft, and dessert-inspired."},"Peppermint":{price:300,description:"Your fresh pick: a cool, minty mood for your ritual."},"Bubble Berry":{price:300,description:"Your playful pick: sweet bubblegum energy with a fruity twist."}};const cart={};const money=n=>"KES "+n.toLocaleString("en-KE");const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));const sms=document.getElementById("smsOrder");function updateCart(){const items=Object.entries(cart).filter(([,q])=>q>0),count=items.reduce((s,[,q])=>s+q,0),total=items.reduce((s,[n,q])=>s+products[n].price*q,0);document.getElementById("cartHeadline").textContent=count?count+(count===1?" balm in your bag":" balms in your bag"):"Your bag is waiting";document.getElementById("cartDetails").textContent=count?items.map(([n,q])=>n+" × "+q).join(" · "):"Choose a balm or add your Bag Check match to get started.";document.getElementById("cartTotal").textContent=money(total);const receipt=document.getElementById("cartReceipt");if(count){receipt.classList.add("visible");receipt.innerHTML='<div class="bag-visual-head"><span class="bag-visual-icon">🛍️</span><div><strong>Your Solana bag</strong><p>Check your picks before checkout</p></div><span class="bag-count">'+count+' item'+(count===1?'':'s')+'</span></div><div class="receipt-top"><div><div class="receipt-brand">✿ SOLANA SKIN LOVE</div><div class="receipt-label">Your order preview</div></div><div style="text-align:right"><div class="receipt-label">ORDER ESTIMATE</div><strong>#SL-'+String(Date.now()).slice(-5)+'</strong></div></div><div class="receipt-lines">'+items.map(([n,q])=>'<div class="receipt-line bag-item"><div class="bag-item-name"><span>'+esc(n)+'</span><small>'+money(products[n].price)+' each</small></div><div class="bag-item-actions"><button type="button" class="bag-qty" data-cart-action="minus" data-product="'+esc(n)+'" aria-label="Remove one '+esc(n)+'">−</button><span>'+q+'</span><button type="button" class="bag-qty" data-cart-action="plus" data-product="'+esc(n)+'" aria-label="Add one '+esc(n)+'">+</button><strong>'+money(products[n].price*q)+'</strong><button type="button" class="bag-remove" data-cart-action="remove" data-product="'+esc(n)+'" aria-label="Remove '+esc(n)+' from bag">Remove</button></div></div>').join('')+'</div><div class="receipt-total"><span>ESTIMATED TOTAL</span><span>'+money(total)+'</span></div><div class="mpesa-checkout"><span class="mpesa-label">M-PESA CHECKOUT</span><h3>Ready to pay? Send M-Pesa to:</h3><div class="mpesa-number-row"><strong>0798 682 747</strong><button type="button" id="copyMpesaNumber" class="copy-mpesa">Copy number</button></div><p>Open M-PESA on your phone, choose <b>Send Money</b>, enter <b>0798682747</b>, and send <b>'+money(total)+'</b>. Keep your confirmation message, then text your order to Solana so we can match your payment and confirm delivery or pickup.</p><p class="mpesa-note">Payment is not processed automatically on this website. Please verify the recipient name shown by M-PESA before confirming the transfer. Delivery fees, if any, are confirmed separately.</p><a class="order-btn order-btn-primary bag-confirm-order" href="'+sms.href+'">✉ Text my order details</a></div>'}else{receipt.classList.remove("visible");receipt.innerHTML='<div class="empty-bag"><span>🛍️</span><strong>Your bag is empty for now</strong><p>Add a favourite from the collection or choose the balm suggested by your Bag Check result.</p><a href="#products">Explore the balms ↗</a></div>'}document.querySelectorAll(".shipping-step").forEach((step,i)=>step.classList.toggle("is-active",count>0&&i===0));document.getElementById("stickyCount").textContent=count+(count===1?" balm":" balms");document.getElementById("stickyTotal").textContent=money(total);const body=count?"Hi Solana Skin Love! I'd like to order: "+items.map(([n,q])=>n+" x "+q).join(", ")+". Estimated total: "+money(total)+". I will pay via M-PESA to 0798682747. Please confirm delivery/pickup details.":"Hi Solana Skin Love! I'd like to ask about your lip balms.";sms.href="sms:+254736019598?body="+encodeURIComponent(body);sms.textContent=count?"✉ Text my order · "+money(total):"✉ Ask about ordering";const confirmLink=receipt.querySelector(".bag-confirm-order");if(confirmLink)confirmLink.href=sms.href}receiptDelegation();function receiptDelegation(){const receipt=document.getElementById("cartReceipt");if(receipt.dataset.bound)return;receipt.dataset.bound="1";receipt.addEventListener("click",e=>{const b=e.target.closest("[data-cart-action]");if(b){const n=b.dataset.product,action=b.dataset.cartAction;if(!products[n]||!cart[n])return;if(action==="plus")cart[n]++;if(action==="minus")cart[n]--;if(action==="remove")cart[n]=0;updateCart();return}if(e.target.closest("#copyMpesaNumber")){const copy="0798682747";const btn=e.target.closest("#copyMpesaNumber");if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(copy).then(()=>{btn.textContent="Copied ✓"}).catch(()=>{btn.textContent=copy})}else{btn.textContent=copy}}})}document.querySelectorAll(".add-to-cart").forEach(b=>b.addEventListener("click",()=>{const n=b.dataset.product;cart[n]=(cart[n]||0)+1;b.textContent="✓ Added ("+cart[n]+")";b.animate([{transform:"translateY(-8px) scale(1.05)"},{transform:"translateY(0) scale(1)"}],{duration:360,easing:"ease-out"});updateCart();document.getElementById("orderSummary").scrollIntoView({behavior:"smooth",block:"nearest"})}));const key="solana-skinlove-reviews-v1";let rating=0;const stars=[...document.querySelectorAll(".rating-star")],hint=document.getElementById("ratingHint");stars.forEach(b=>b.addEventListener("click",()=>{rating=+b.dataset.rating;stars.forEach(s=>{s.classList.toggle("selected",+s.dataset.rating<=rating);s.setAttribute("aria-pressed",String(+s.dataset.rating===rating))});hint.textContent=rating+" out of 5 stars — "+["","Not for me","Could be better","It’s okay","Loved it","Absolutely loved it"][rating]}));function getReviews(){try{return JSON.parse(localStorage.getItem(key)||"[]").filter(r=>r&&r.name&&r.product&&r.review&&r.rating>=1&&r.rating<=5)}catch{return[]}}function render(){const reviews=getReviews(),grid=document.getElementById("reviewsGrid"),avg=reviews.length?reviews.reduce((s,r)=>s+r.rating,0)/reviews.length:0;document.getElementById("reviewAverage").textContent=reviews.length?avg.toFixed(1):"—";document.getElementById("reviewAverageStars").textContent=reviews.length?"★".repeat(Math.round(avg))+"☆".repeat(5-Math.round(avg)):"☆☆☆☆☆";document.getElementById("reviewCount").textContent=reviews.length?reviews.length+(reviews.length===1?" local review":" local reviews"):"No reviews yet · Be the first";if(!reviews.length){grid.innerHTML='<div class="reviews-empty"><span>✿</span><h3>It’s a fresh page.</h3><p>Be the first to leave a Solana love note. Your rating and review will appear here in this browser.</p></div>';return}grid.innerHTML=reviews.slice().reverse().map(r=>'<article class="review-card"><div class="review-top"><div class="review-avatar">'+esc(r.name.trim().charAt(0).toUpperCase())+'</div><div class="review-meta"><div class="review-name">'+esc(r.name)+'</div><div class="review-flavour">'+esc(r.product)+'</div></div><div class="review-stars" aria-label="'+r.rating+' out of 5 stars">'+"★".repeat(r.rating)+"☆".repeat(5-r.rating)+'</div></div><span class="review-quote-mark">“</span><p class="review-text">'+esc(r.review)+'</p><div class="review-date">'+new Date(r.createdAt).toLocaleDateString(undefined,{month:"long",year:"numeric"})+'</div></article>').join("")}document.getElementById("reviewForm").addEventListener("submit",e=>{e.preventDefault();const status=document.getElementById("reviewStatus"),name=document.getElementById("reviewName").value.trim(),product=document.getElementById("reviewProduct").value,review=document.getElementById("reviewText").value.trim();if(!rating){status.textContent="Choose a star rating before posting your love note.";status.className="review-form-status error";return}if(!name||!product||review.length<5){status.textContent="Please complete each field and write at least a few words.";status.className="review-form-status error";return}const reviews=getReviews();reviews.push({name,product,review,rating,createdAt:new Date().toISOString()});try{localStorage.setItem(key,JSON.stringify(reviews));render();e.target.reset();rating=0;stars.forEach(s=>{s.classList.remove("selected");s.setAttribute("aria-pressed","false")});hint.textContent="Tap a star to rate from 1 to 5.";status.textContent="Your love note has been added on this device. Thanks for supporting a Kenyan-made brand!";status.className="review-form-status success"}catch{status.textContent="Your browser could not save this review. Please try again.";status.className="review-form-status error"}});const allNames=Object.keys(products);document.getElementById("oracleButton").addEventListener("click",()=>{const n=allNames[Math.floor(Math.random()*allNames.length)];document.getElementById("oracleResult").textContent="The balm oracle picked "+n+" — "+products[n].description;document.getElementById("oracleButton").textContent="Again, oracle! ↻";});const checks=[...document.querySelectorAll(".bag-check")];const bagResult=document.getElementById("bagResult");function predictBagPersonality(){const picked=checks.map((x,i)=>x.checked?i:-1).filter(i=>i>=0),n=picked.length;document.getElementById("bagProgress").style.width=(n/6*100)+"%";if(!n){bagResult.textContent="0/6 checked. Pick your everyday essentials to reveal your bag style.";return}const types=[{ids:[0,1],title:"The Prepared Planner ✨",copy:"You like being ready for the day. Your essentials have a place, and you appreciate having what you need close by.",balm:"Peppermint",reason:"A fresh pick for your on-the-go routine."},{ids:[2,3],title:"The Comfort Seeker ☕",copy:"You enjoy familiar favourites and little comforts that make a busy day feel easier.",balm:"French Vanilla",reason:"A cosy favourite for your everyday bag."},{ids:[4],title:"The Considerate One 💗",copy:"You think about the people around you and enjoy having something handy to share.",balm:"Bubble Berry",reason:"A fun flavour to keep close or share."},{ids:[5],title:"The Routine Keeper 🪞",copy:"You like a routine that works for you and small essentials that help you feel prepared.",balm:"Peppermint",reason:"An easy addition to your daily essentials."}];const scores=types.map(t=>({...t,score:t.ids.reduce((s,id)=>s+(picked.includes(id)?1:0),0)})).sort((a,b)=>b.score-a.score);let chosen=scores[0];if(scores[0].score===scores[1].score){const options=[{title:"The Everyday Essentialist 🧡",copy:"You keep the things you use most within reach and prefer practical picks that fit your day.",balm:"French Vanilla",reason:"A simple, easygoing flavour for your bag."},{title:"The Little Treat Lover 🍓",copy:"You enjoy adding small favourites to your day, just because they make you smile.",balm:"Bubble Berry",reason:"A playful flavour for your little treat moments."},{title:"The On-the-Go Type ⚡",copy:"You like to keep moving and have useful essentials ready wherever the day takes you.",balm:"Peppermint",reason:"A fresh pick for your busy-day kit."}];chosen=options[n%options.length]}bagResult.innerHTML="<strong>"+chosen.title+"</strong><br>"+chosen.copy+"<br><span class=\"bag-balm-match\">Your balm match: <b>"+chosen.balm+"</b> · KES 300</span><br><small>"+n+"/6 checked. Just a fun bag-style prediction.</small><br><button type=\"button\" class=\"bag-match-add\" id=\"bagMatchAdd\">Add "+chosen.balm+" to my bag +</button>";document.getElementById("bagMatchAdd").addEventListener("click",()=>{if(products[chosen.balm]){cart[chosen.balm]=(cart[chosen.balm]||0)+1;updateCart();document.getElementById("orderSummary")?.scrollIntoView({behavior:"smooth",block:"nearest"})}})}checks.forEach(x=>x.addEventListener("change",predictBagPersonality));document.getElementById("trioButton").addEventListener("click",()=>{allNames.forEach(n=>cart[n]=(cart[n]||0)+1);updateCart();document.getElementById("trioResult").textContent="Trio added! 3 balms · KES 900. Your ritual is ready.";document.getElementById("trioButton").textContent="Trio added ✓";});render();updateCart()})();</script>
+<script>(()=>{const products={"French Vanilla":{price:300,description:"Your cozy pick: warm, soft, and dessert-inspired."},"Peppermint":{price:300,description:"Your fresh pick: a cool, minty mood for your ritual."},"Bubble Berry":{price:300,description:"Your playful pick: sweet bubblegum energy with a fruity twist."}};const cart={};const money=n=>"KES "+n.toLocaleString("en-KE");const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));const sms=document.getElementById("smsOrder");function updateCart(){const items=Object.entries(cart).filter(([,q])=>q>0),count=items.reduce((s,[,q])=>s+q,0),total=items.reduce((s,[n,q])=>s+products[n].price*q,0);document.getElementById("cartHeadline").textContent=count?count+(count===1?" balm in your bag":" balms in your bag"):"Your selection is waiting";document.getElementById("cartDetails").textContent=count?items.map(([n,q])=>n+" × "+q).join(" · "):"Choose a balm or add your Bag Check match to get started.";document.getElementById("cartTotal").textContent=money(total);const receipt=document.getElementById("cartReceipt");if(count){receipt.classList.add("visible");receipt.innerHTML='<div class="bag-visual-head"><span class="bag-visual-icon">🛍️</span><div><strong>Your Solana bag</strong><p>Check your picks before checkout</p></div><span class="bag-count">'+count+' item'+(count===1?'':'s')+'</span></div><div class="receipt-top"><div><div class="receipt-brand">✿ SOLANA SKIN LOVE</div><div class="receipt-label">Your order preview</div></div><div style="text-align:right"><div class="receipt-label">ORDER ESTIMATE</div><strong>#SL-'+String(Date.now()).slice(-5)+'</strong></div></div><div class="receipt-lines">'+items.map(([n,q])=>'<div class="receipt-line bag-item"><div class="bag-item-name"><span>'+esc(n)+'</span><small>'+money(products[n].price)+' each</small></div><div class="bag-item-actions"><button type="button" class="bag-qty" data-cart-action="minus" data-product="'+esc(n)+'" aria-label="Remove one '+esc(n)+'">−</button><span>'+q+'</span><button type="button" class="bag-qty" data-cart-action="plus" data-product="'+esc(n)+'" aria-label="Add one '+esc(n)+'">+</button><strong>'+money(products[n].price*q)+'</strong><button type="button" class="bag-remove" data-cart-action="remove" data-product="'+esc(n)+'" aria-label="Remove '+esc(n)+' from bag">Remove</button></div></div>').join('')+'</div><div class="receipt-total"><span>ESTIMATED TOTAL</span><span>'+money(total)+'</span></div><div class="mpesa-checkout"><span class="mpesa-label">M-PESA CHECKOUT</span><h3>Ready to pay? Send M-Pesa to:</h3><div class="mpesa-number-row"><strong>0798 682 747</strong><button type="button" id="copyMpesaNumber" class="copy-mpesa">Copy number</button></div><p>Open M-PESA on your phone, choose <b>Send Money</b>, enter <b>0798682747</b>, and send <b>'+money(total)+'</b>. Keep your confirmation message, then text your order to Solana so we can match your payment and confirm delivery or pickup.</p><p class="mpesa-note">Payment is not processed automatically on this website. Please verify the recipient name shown by M-PESA before confirming the transfer. Delivery fees, if any, are confirmed separately.</p><a class="order-btn order-btn-primary bag-confirm-order" href="'+sms.href+'">✉ Text my order details</a></div>'}else{receipt.classList.remove("visible");receipt.innerHTML='<div class="empty-bag"><span>🛍️</span><strong>Your bag is empty for now</strong><p>Add a favourite from the collection or choose the balm suggested by your Bag Check result.</p><a href="#products">Explore the balms ↗</a></div>'}document.querySelectorAll(".shipping-step").forEach((step,i)=>step.classList.toggle("is-active",count>0&&i===0));document.getElementById("stickyCount").textContent=count+(count===1?" balm":" balms");document.getElementById("stickyTotal").textContent=money(total);const body=count?"Hi Solana Skin Love! I'd like to order: "+items.map(([n,q])=>n+" x "+q).join(", ")+". Estimated total: "+money(total)+". I will pay via M-PESA to 0798682747. Please confirm delivery/pickup details.":"Hi Solana Skin Love! I'd like to ask about your lip balms.";sms.href="sms:+254736019598?body="+encodeURIComponent(body);sms.textContent=count?"✉ Text my order · "+money(total):"✉ Ask about ordering";const confirmLink=receipt.querySelector(".bag-confirm-order");if(confirmLink)confirmLink.href=sms.href}receiptDelegation();function receiptDelegation(){const receipt=document.getElementById("cartReceipt");if(receipt.dataset.bound)return;receipt.dataset.bound="1";receipt.addEventListener("click",e=>{const b=e.target.closest("[data-cart-action]");if(b){const n=b.dataset.product,action=b.dataset.cartAction;if(!products[n]||!cart[n])return;if(action==="plus")cart[n]++;if(action==="minus")cart[n]--;if(action==="remove")cart[n]=0;updateCart();return}if(e.target.closest("#copyMpesaNumber")){const copy="0798682747";const btn=e.target.closest("#copyMpesaNumber");if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(copy).then(()=>{btn.textContent="Copied ✓"}).catch(()=>{btn.textContent=copy})}else{btn.textContent=copy}}})}document.querySelectorAll(".add-to-cart").forEach(b=>b.addEventListener("click",()=>{const n=b.dataset.product;cart[n]=(cart[n]||0)+1;b.textContent="✓ Added ("+cart[n]+")";b.animate([{transform:"translateY(-8px) scale(1.05)"},{transform:"translateY(0) scale(1)"}],{duration:360,easing:"ease-out"});updateCart();document.getElementById("orderSummary").scrollIntoView({behavior:"smooth",block:"nearest"})}));const key="solana-skinlove-reviews-v1";let rating=0;const stars=[...document.querySelectorAll(".rating-star")],hint=document.getElementById("ratingHint");stars.forEach(b=>b.addEventListener("click",()=>{rating=+b.dataset.rating;stars.forEach(s=>{s.classList.toggle("selected",+s.dataset.rating<=rating);s.setAttribute("aria-pressed",String(+s.dataset.rating===rating))});hint.textContent=rating+" out of 5 stars — "+["","Not for me","Could be better","It’s okay","Loved it","Absolutely loved it"][rating]}));function getReviews(){try{return JSON.parse(localStorage.getItem(key)||"[]").filter(r=>r&&r.name&&r.product&&r.review&&r.rating>=1&&r.rating<=5)}catch{return[]}}function render(){const reviews=getReviews(),grid=document.getElementById("reviewsGrid"),avg=reviews.length?reviews.reduce((s,r)=>s+r.rating,0)/reviews.length:0;document.getElementById("reviewAverage").textContent=reviews.length?avg.toFixed(1):"—";document.getElementById("reviewAverageStars").textContent=reviews.length?"★".repeat(Math.round(avg))+"☆".repeat(5-Math.round(avg)):"☆☆☆☆☆";document.getElementById("reviewCount").textContent=reviews.length?reviews.length+(reviews.length===1?" local review":" local reviews"):"No reviews yet · Be the first";if(!reviews.length){grid.innerHTML='<div class="reviews-empty"><span>✿</span><h3>It’s a fresh page.</h3><p>Be the first to leave a Solana love note. Your rating and review will appear here in this browser.</p></div>';return}grid.innerHTML=reviews.slice().reverse().map(r=>'<article class="review-card"><div class="review-top"><div class="review-avatar">'+esc(r.name.trim().charAt(0).toUpperCase())+'</div><div class="review-meta"><div class="review-name">'+esc(r.name)+'</div><div class="review-flavour">'+esc(r.product)+'</div></div><div class="review-stars" aria-label="'+r.rating+' out of 5 stars">'+"★".repeat(r.rating)+"☆".repeat(5-r.rating)+'</div></div><span class="review-quote-mark">“</span><p class="review-text">'+esc(r.review)+'</p><div class="review-date">'+new Date(r.createdAt).toLocaleDateString(undefined,{month:"long",year:"numeric"})+'</div></article>').join("")}document.getElementById("reviewForm").addEventListener("submit",e=>{e.preventDefault();const status=document.getElementById("reviewStatus"),name=document.getElementById("reviewName").value.trim(),product=document.getElementById("reviewProduct").value,review=document.getElementById("reviewText").value.trim();if(!rating){status.textContent="Choose a star rating before posting your love note.";status.className="review-form-status error";return}if(!name||!product||review.length<5){status.textContent="Please complete each field and write at least a few words.";status.className="review-form-status error";return}const reviews=getReviews();reviews.push({name,product,review,rating,createdAt:new Date().toISOString()});try{localStorage.setItem(key,JSON.stringify(reviews));render();e.target.reset();rating=0;stars.forEach(s=>{s.classList.remove("selected");s.setAttribute("aria-pressed","false")});hint.textContent="Tap a star to rate from 1 to 5.";status.textContent="Your love note has been added on this device. Thanks for supporting a Kenyan-made brand!";status.className="review-form-status success"}catch{status.textContent="Your browser could not save this review. Please try again.";status.className="review-form-status error"}});const allNames=Object.keys(products);document.getElementById("oracleButton").addEventListener("click",()=>{const n=allNames[Math.floor(Math.random()*allNames.length)];document.getElementById("oracleResult").textContent="The balm oracle picked "+n+" — "+products[n].description;document.getElementById("oracleButton").textContent="Again, oracle! ↻";});const checks=[...document.querySelectorAll(".bag-check")];const bagResult=document.getElementById("bagResult");function predictBagPersonality(){const picked=checks.map((x,i)=>x.checked?i:-1).filter(i=>i>=0),n=picked.length;document.getElementById("bagProgress").style.width=(n/6*100)+"%";if(!n){bagResult.textContent="0/6 checked. Pick your everyday essentials to reveal your bag style.";return}const types=[{ids:[0,1],title:"The Prepared Planner ✨",copy:"You like being ready for the day. Your essentials have a place, and you appreciate having what you need close by.",balm:"Peppermint",reason:"A fresh pick for your on-the-go routine."},{ids:[2,3],title:"The Comfort Seeker ☕",copy:"You enjoy familiar favourites and little comforts that make a busy day feel easier.",balm:"French Vanilla",reason:"A cosy favourite for your everyday bag."},{ids:[4],title:"The Considerate One 💗",copy:"You think about the people around you and enjoy having something handy to share.",balm:"Bubble Berry",reason:"A fun flavour to keep close or share."},{ids:[5],title:"The Routine Keeper 🪞",copy:"You like a routine that works for you and small essentials that help you feel prepared.",balm:"Peppermint",reason:"An easy addition to your daily essentials."}];const scores=types.map(t=>({...t,score:t.ids.reduce((s,id)=>s+(picked.includes(id)?1:0),0)})).sort((a,b)=>b.score-a.score);let chosen=scores[0];if(scores[0].score===scores[1].score){const options=[{title:"The Everyday Essentialist 🧡",copy:"You keep the things you use most within reach and prefer practical picks that fit your day.",balm:"French Vanilla",reason:"A simple, easygoing flavour for your bag."},{title:"The Little Treat Lover 🍓",copy:"You enjoy adding small favourites to your day, just because they make you smile.",balm:"Bubble Berry",reason:"A playful flavour for your little treat moments."},{title:"The On-the-Go Type ⚡",copy:"You like to keep moving and have useful essentials ready wherever the day takes you.",balm:"Peppermint",reason:"A fresh pick for your busy-day kit."}];chosen=options[n%options.length]}bagResult.innerHTML="<strong>"+chosen.title+"</strong><br>"+chosen.copy+"<br><span class=\"bag-balm-match\">Your balm match: <b>"+chosen.balm+"</b> · KES 300</span><br><small>"+n+"/6 checked. Just a fun bag-style prediction.</small><br><button type=\"button\" class=\"bag-match-add\" id=\"bagMatchAdd\">Add "+chosen.balm+" to my bag +</button>";document.getElementById("bagMatchAdd").addEventListener("click",()=>{if(products[chosen.balm]){cart[chosen.balm]=(cart[chosen.balm]||0)+1;updateCart();document.getElementById("orderSummary")?.scrollIntoView({behavior:"smooth",block:"nearest"})}})}checks.forEach(x=>x.addEventListener("change",predictBagPersonality));document.getElementById("trioButton").addEventListener("click",()=>{allNames.forEach(n=>cart[n]=(cart[n]||0)+1);updateCart();document.getElementById("trioResult").textContent="Trio added! 3 balms · KES 900. Your ritual is ready.";document.getElementById("trioButton").textContent="Trio added ✓";});render();updateCart()})();</script>
 </body>
 </html>
